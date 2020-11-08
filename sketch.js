@@ -36,6 +36,7 @@ function setup() {
 
 function draw() {
   background(0,0,0);  
+  Engine.update(engine);
   ground.display();
   for (var i=0; i<plinkos.length; i++){
     plinkos[i].display();
@@ -43,8 +44,8 @@ function draw() {
   for (var k=0; k<divisions.length; k++){
     divisions[k].display();
   }
-  if (frameCount%60===0){
-    particles.push(new Particle(random(width/2-10,width/2+10), 10,10))
+  if (frameCount%35===0){
+    particles.push(new Particle(random(30,450), 10,10))
   }
   for (var m=0; m<particles.length; m++){
     particles[m].display();
